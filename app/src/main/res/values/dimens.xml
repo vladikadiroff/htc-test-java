@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="content_corner_radius">16dp</dimen>
+    <dimen name="chip_skill_height">25dp</dimen>
+    <dimen name="chip_skill_corner">5dp</dimen>
+    <dimen name="chip_skill_icon_size">10dp</dimen>
+    <dimen name="large_icon_size">120dp</dimen>
+    <dimen name="margin_in_collapsing">28dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="bottom_sheet_padding_elements">12dp</dimen>
+    <dimen name="image_avatar_size">50dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="bottom_sheet_corner_radius_16">16dp</dimen>
+    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+</resources>

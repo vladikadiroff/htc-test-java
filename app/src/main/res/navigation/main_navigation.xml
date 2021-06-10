@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="ru.vladikadiroff.htc.test_java.presentation.employees.home.EmployeesFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_employees">
+        <action
+            android:id="@+id/actionToSortDialog"
+            app:destination="@id/employeesSortDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/employeesSortDialog"
+        android:name="ru.vladikadiroff.htc.test_java.presentation.employees.sort.ChangeSortStrategyDialog"
+        android:label="EmployeesSortDialog"
+        tools:layout="@layout/dialog_employees_sort_strategy"/>
+</navigation>

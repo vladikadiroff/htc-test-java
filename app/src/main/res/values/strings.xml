@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">HTC Test</string>
+    <string name="title_test_kotlin">HTC Test Kotlin</string>
+    <string name="employees_change_sort_strategy_key">employees_change_sort_strategy_key</string>
+    <string name="current_sort_strategy_key">employee_strategy_key</string>
+    <string name="employees_toolbar_title">Employees</string>
+
+
+    <string name="sort_by_name">Sort by name</string>
+    <string name="sort_by_phone">Sort by phone number</string>
+    <string name="sort_by_count_skills">Sort by number of skills</string>
+    <string name="oooops">Oooops!</string>
+    <string name="swipe_down_to_refresh">Swipe Down to refresh</string>
+    <string name="employees_list_empty">No employees yet</string>
+
+    <string name="uknown_person">Unknown Person</string>
+    <string name="founded_year_ago">Founded year ago</string>
+    <string name="founded_years_ago">Founded %s years ago</string>
+
+</resources>

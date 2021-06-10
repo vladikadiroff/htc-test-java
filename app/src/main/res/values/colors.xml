@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#E74D57</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background">#eceaf3</color>
+    <color name="colorHighlight">#10000000</color>
+    <color name="navigation_drawer_background">#837574</color>
+
+
+
+    <color name="competention_chips">#827717</color>
+    <color name="skills_chips">#c0ca33</color>
+    <color name="test_color">#ff6f00</color>
+
+</resources>

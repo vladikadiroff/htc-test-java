@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    style="@style/ClickableRoundedContainer"
+    android:layout_marginBottom="@dimen/padding_8dp"
+    android:orientation="horizontal">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        style="@style/RoundedImageView"
+        android:layout_width="@dimen/image_avatar_size"
+        android:layout_height="@dimen/image_avatar_size"
+        android:layout_margin="@dimen/padding_16dp"
+        android:src="@drawable/ic_avatar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_16dp">
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/TextSansPro.Medium"
+            tools:text="@tools:sample/last_names" />
+
+        <TextView
+            android:id="@+id/phone"
+            style="@style/TextSansPro.Summary"
+            android:layout_marginTop="2dp"
+            android:maxLines="1"
+            tools:text="@tools:sample/us_phones" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/skills"
+            style="@style/ChipGroup"
+            android:layout_marginTop="@dimen/padding_8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    style="@style/ClickableRoundedContainer"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/check"
+        style="@style/IconMedium"
+        android:layout_margin="@dimen/bottom_sheet_padding_elements"
+        android:src="@drawable/ic_check" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/TextSansPro.Medium"
+        android:layout_gravity="center_vertical"
+        tools:text="Sort by name" />
+
+
+</LinearLayout>

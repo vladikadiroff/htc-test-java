@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/margin_in_collapsing"
+    android:paddingEnd="@dimen/margin_in_collapsing"
+    tools:showIn="@layout/fragment_employees">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/TextSansPro.Title"
+        tools:text="High Technologies Center" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/TextSansPro.Normal"
+        tools:text="Founded by 18 years ago" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/competences"
+        style="@style/ChipGroup"
+        android:layout_marginTop="@dimen/padding_16dp"
+        android:visibility="gone" />
+
+</LinearLayout>
