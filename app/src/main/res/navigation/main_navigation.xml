@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentHome"
-        android:name="ru.vladikadiroff.htc.test_java.presentation.employees.home.EmployeesFragment"
+        android:name="ru.vladikadiroff.htc.test.presentation.employees.home.EmployeesFragment"
         android:label="FragmentHome"
         tools:layout="@layout/fragment_employees">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <dialog
         android:id="@+id/employeesSortDialog"
-        android:name="ru.vladikadiroff.htc.test_java.presentation.employees.sort.ChangeSortStrategyDialog"
+        android:name="ru.vladikadiroff.htc.test.presentation.employees.sort.ChangeSortStrategyDialog"
         android:label="EmployeesSortDialog"
         tools:layout="@layout/dialog_employees_sort_strategy"/>
 </navigation>
