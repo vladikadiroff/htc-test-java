@@ -97,9 +97,11 @@ public class EmployeesViewModel extends ViewModel implements OnLoadContentStateC
 
     @Override
     public void onLoading() {
-        errorScreen.setValue(false);
-        if (errorScreen.getValue() == null || errorScreen.getValue())
+        if (errorScreen.getValue() == null || errorScreen.getValue()){
             loadingScreen.setValue(true);
+            swipeRefreshEvent.setValue(new Event<>(false));
+        }
+        errorScreen.setValue(false);
     }
 
     public LiveData<CompanyInfo> getCompanyInfo() {
