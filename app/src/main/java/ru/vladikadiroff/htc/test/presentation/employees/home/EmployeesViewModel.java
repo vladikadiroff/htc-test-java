@@ -65,18 +65,6 @@ public class EmployeesViewModel extends ViewModel implements OnLoadContentStateC
         showMessageEvent.setValue(new Event<>(strategyMapper.getStrategyName(strategy)));
     }
 
-    public void changeSortStrategy() {
-        changeSortStrategyEvent.setValue(new Event<>(currentStrategy));
-    }
-
-    public void refresh() {
-        loadUseCase.loadContent();
-    }
-
-    public void onClickItem(String name) {
-        showMessageEvent.setValue(new Event<>(name));
-    }
-
     @Override
     public void onSuccess(EmployeesDomainModel content) {
         List<EmployeeDomainModel> sortEmployees = sortUseCase.sort(content.getEmployees());
@@ -97,9 +85,23 @@ public class EmployeesViewModel extends ViewModel implements OnLoadContentStateC
 
     @Override
     public void onLoading() {
-        errorScreen.setValue(false);
-        if (errorScreen.getValue() == null || errorScreen.getValue())
+        if (errorScreen.getValue() == null || errorScreen.getValue()){
             loadingScreen.setValue(true);
+            swipeRefreshEvent.setValue(new Event<>(false));
+        }
+        errorScreen.setValue(false);
+    }
+
+    public void changeSortStrategy() {
+        changeSortStrategyEvent.setValue(new Event<>(currentStrategy));
+    }
+
+    public void refresh() {
+        loadUseCase.loadContent();
+    }
+
+    public void onClickItem(String name) {
+        showMessageEvent.setValue(new Event<>(name));
     }
 
     public LiveData<CompanyInfo> getCompanyInfo() {

@@ -14,6 +14,8 @@
     <string name="employees_list_empty">No employees yet</string>
 
     <string name="uknown_person">Unknown Person</string>
+    <string name="unavailable_name">Name is not available</string>
+
     <string name="founded_year_ago">Founded year ago</string>
     <string name="founded_years_ago">Founded %s years ago</string>
 

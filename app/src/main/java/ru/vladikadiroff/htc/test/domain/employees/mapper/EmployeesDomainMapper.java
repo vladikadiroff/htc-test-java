@@ -28,8 +28,9 @@ public class EmployeesDomainMapper {
     private List<EmployeeDomainModel> mapEmployees(List<EmployeeRequestModel> employees) {
         List<EmployeeDomainModel> list = new ArrayList<>();
         for (EmployeeRequestModel employee : employees) {
-            if (!isEmptyEmployee(employee))
+            if (!isEmptyEmployee(employee)) {
                 list.add(mapEmployee(employee));
+            }
         }
         return list;
     }

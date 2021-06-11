@@ -23,9 +23,12 @@ public class EmployeesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
 
     public void submitData(List<EmployeeAdapterModel> list) {
-        if (list.isEmpty()) differ.submitList(Collections.singletonList(new EmployeesEmpty()),
-                () -> onDifferCalculateListener.onComplete());
-        else differ.submitList(list, () -> onDifferCalculateListener.onComplete());
+        if (list.isEmpty()) {
+            differ.submitList(Collections.singletonList(new EmployeesEmpty()),
+                    () -> onDifferCalculateListener.onComplete());
+        } else {
+            differ.submitList(list, () -> onDifferCalculateListener.onComplete());
+        }
     }
 
     public void setOnDifferCalculateListener(OnDifferCalculateCompleteListener listener) {
@@ -44,8 +47,9 @@ public class EmployeesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        if (holder instanceof EmployeesViewHolderFactory.EmployeeItem)
+        if (holder instanceof EmployeesViewHolderFactory.EmployeeItem) {
             ((EmployeeItem) holder).bind((Employee) differ.getCurrentList().get(position), onItemClick);
+        }
     }
 
     @Override
