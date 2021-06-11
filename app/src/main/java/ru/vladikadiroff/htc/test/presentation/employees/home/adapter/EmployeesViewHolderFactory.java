@@ -32,11 +32,17 @@ public class EmployeesViewHolderFactory {
         }
 
         public void bind(Employee model, EmployeesAdapter.OnItemClickListener listener) {
-            if (model.getName().isEmpty()) binding.name.setText(binding.getRoot().getContext().getResources().getString(R.string.uknown_person));
-            else binding.name.setText(model.getName());
             TextViewHelper.setTextOrGone(binding.phone, model.getPhone());
             ChipGroupHelper.replaceChipsByList(binding.skills, model.getSkills(), R.attr.CustomChipStyle);
-            binding.container.setOnClickListener(view -> listener.onItemClick(model.getName()));
+            if (model.getName().isEmpty()) {
+                binding.name.setText(binding.getRoot().getContext()
+                        .getResources().getString(R.string.uknown_person));
+                binding.container.setOnClickListener(view -> listener.onItemClick(binding.getRoot()
+                        .getContext().getResources().getString(R.string.unavailable_name)));
+            } else {
+                binding.name.setText(model.getName());
+                binding.container.setOnClickListener(view -> listener.onItemClick(model.getName()));
+            }
         }
 
     }
