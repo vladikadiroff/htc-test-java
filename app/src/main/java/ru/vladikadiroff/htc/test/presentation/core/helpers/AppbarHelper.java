@@ -4,9 +4,8 @@ import com.google.android.material.appbar.AppBarLayout;
 
 public class AppbarHelper {
 
-    public static void onAppBarScrollPositionChange(
-            AppBarLayout appBar,
-            OnScrollPositionChangedListener listener) {
+    public static void onAppBarScrollPositionChange(AppBarLayout appBar,
+                                                    OnScrollPositionChangedListener listener) {
         appBar.addOnOffsetChangedListener((appBarLayout, verticalOffset) -> {
             Float scrollPosition =
                     1f - (float) verticalOffset / (float) -appBarLayout.getTotalScrollRange();

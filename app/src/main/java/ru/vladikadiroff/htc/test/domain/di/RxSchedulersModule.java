@@ -14,21 +14,18 @@ import io.reactivex.schedulers.Schedulers;
 @InstallIn(SingletonComponent.class)
 public class RxSchedulersModule {
 
-    private final Scheduler ioScheduler = Schedulers.io();
-    private final Scheduler mainScheduler = AndroidSchedulers.mainThread();
-
     @Provides
     @Singleton
     @SchedulerIO
     Scheduler provideSchedulerIO() {
-        return ioScheduler;
+        return Schedulers.io();
     }
 
     @Provides
     @Singleton
     @SchedulerMain
     Scheduler provideSchedulerMain() {
-        return mainScheduler;
+        return AndroidSchedulers.mainThread();
     }
 
 }

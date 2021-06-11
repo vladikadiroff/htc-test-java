@@ -46,7 +46,9 @@ public class EmployeesMapper {
     public List<EmployeeDomainModel> mapEmployeesToDomain(List<EmployeeAdapterModel> employees) {
         List<EmployeeDomainModel> list = new ArrayList<>();
         for (EmployeeAdapterModel employee : employees) {
-            if (employee instanceof Employee) list.add(mapEmployeeToDomain((Employee) employee));
+            if (employee instanceof Employee) {
+                list.add(mapEmployeeToDomain((Employee) employee));
+            }
         }
         return list;
     }
@@ -71,8 +73,11 @@ public class EmployeesMapper {
     private String mapAgeFromDomain(String age) {
         if (age.isEmpty()) return age;
         try {
-            if (Integer.parseInt(age) == 1) return resources.getString(R.string.founded_year_ago);
-            else return resources.getString(R.string.founded_years_ago, age);
+            if (Integer.parseInt(age) == 1) {
+                return resources.getString(R.string.founded_year_ago);
+            } else {
+                return resources.getString(R.string.founded_years_ago, age);
+            }
         } catch (Exception e) {
             return "";
         }

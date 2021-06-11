@@ -18,8 +18,9 @@ import static ru.vladikadiroff.htc.test.presentation.core.helpers.ViewHelper.cre
 public class EmployeesViewHolderFactory {
 
     public static RecyclerView.ViewHolder create(ViewGroup root, int viewType) {
-        if (viewType == EmployeeAdapterModel.EMPLOYEE)
+        if (viewType == EmployeeAdapterModel.EMPLOYEE){
             return new EmployeeItem(createView(R.layout.item_employee, root));
+        }
         return new EmployeesListEmptyItem(createView(R.layout.item_employees_list_empty, root));
     }
 
