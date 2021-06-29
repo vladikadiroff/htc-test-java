@@ -18,7 +18,7 @@ import ru.vladikadiroff.htc.test.data.api.HtcService;
 @InstallIn(SingletonComponent.class)
 public class NetworkModule {
 
-    private final String BASE_URL = "http://www.mocky.io/";
+    private final static String BASE_URL = "http://www.mocky.io/";
     private final Gson gson = new GsonBuilder().setLenient().create();
 
     @Provides

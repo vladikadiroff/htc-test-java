@@ -33,22 +33,26 @@ public class EmployeesFragment extends ViewBindingFragment<FragmentEmployeesBind
     protected void initFragment() {
         initViews();
         initViewModel();
+        observeOnChangeSortStrategy();
     }
 
     private void initViews() {
-        observeOnChangeSortStrategy();
-        enableCollapsingToolbar(false);
+        initToolbar();
         getViewBinding().employees.setAdapter(adapter);
         getViewBinding().fabSort.setOnClickListener(view -> viewModel.changeSortStrategy());
         getViewBinding().swipeRefresh.setOnRefreshListener(() -> viewModel.refresh());
+        adapter.setOnItemClickListener(name -> viewModel.onClickItem(name));
+        adapter.setOnDifferCalculateListener(() -> getViewBinding().employees.scrollToPosition(0));
+    }
+
+    private void initToolbar() {
+        enableCollapsingToolbar(false);
+        float ratio = (100f - 75f) / 100f;
         AppbarHelper.onAppBarScrollPositionChange(getViewBinding().appBarLayout, scrollPosition -> {
-            float ratio = (100f - 75f) / 100f;
             float alpha = 1f - (1f - scrollPosition) / ratio;
             getViewBinding().collapsingContent.container.setAlpha(alpha);
             enableToolbarShadowForLowApiByAppBarScrollPosition(scrollPosition);
         });
-        adapter.setOnItemClickListener(name -> viewModel.onClickItem(name));
-        adapter.setOnDifferCalculateListener(() -> getViewBinding().employees.scrollToPosition(0));
     }
 
     private void initViewModel() {
