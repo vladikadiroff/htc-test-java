@@ -10,7 +10,7 @@ import ru.vladikadiroff.htc.test.data.models.HtcServiceRequestModel.CompanyReque
 @Singleton
 public class RepositoryImpl implements Repository {
 
-    HtcService service;
+    private final HtcService service;
 
     @Inject
     RepositoryImpl(HtcService service) {
